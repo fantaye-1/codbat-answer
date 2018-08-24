@@ -19,9 +19,28 @@ Answer :-     public boolean in3050(int a, int b) {
               //return tru if one of the value is in the range of 30...40 or 40..60
               return (av && bv ) || (aav && bbv);
   
+  Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, or return 0 if neither is in that range.
+max1020(11, 19) → 19
+max1020(19, 11) → 19
+max1020(11, 9) → 11
   
-  
+Answer :-     public int max1020(int a, int b) {
+              // chek if the value is in the range...
+              boolean av = (a >= 10) && (a <=20);
+              boolean bv = (b >= 10) && (b <=20);
+              int value =0;
 
+              if ((av && bv ) && (a >= b)) {
+                 value = a;
+              }else if ((av && bv ) && (a <= b)){
+                value = b;
+              }else if(av){
+                value = a;
+              }else if(bv){
+                value = b;
+              } 
+              return value;
+            }
 
 
 
