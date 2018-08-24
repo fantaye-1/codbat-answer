@@ -22,7 +22,6 @@ Answer :-     public boolean in3050(int a, int b) {
   
   
 
-I want ot add somthing
-&&]&&&)(
+
 
 
