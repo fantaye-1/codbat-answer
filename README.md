@@ -73,3 +73,89 @@ monkeyTrouble(true, false) → false
 Answer:-\   public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
               return aSmile == bSmile;
             }
+            
+ Given two int values, return their sum. Unless the two values are the same, then return double their sum.
+sumDouble(1, 2) → 3
+sumDouble(3, 2) → 5
+sumDouble(2, 2) → 8      
+
+Ansewr:-    public int sumDouble(int a, int b) {
+                int dsum =1;
+                if(a == b){
+                  dsum = 2;
+                }
+                return dsum*(a +b) ;
+              }
+Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
+
+
+diff21(19) → 2
+diff21(10) → 11
+diff21(21) → 0
+
+ Answer :-     public int diff21(int n) {
+                  int dvalue = 1;
+                  if(n > 21) dvalue = 2;
+
+                  return dvalue *(Math.abs(21 - n));        
+                }
+
+We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if we are in trouble.
+parrotTrouble(true, 6) → true
+parrotTrouble(true, 7) → false
+parrotTrouble(false, 6) → false
+
+Answer:-         public boolean parrotTrouble(boolean talking, int hour) {
+                   if((talking == true) && (hour > 20 || hour < 7 ) ){
+                     return true;
+                   }
+                     return false;
+                  }
+Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
+makes10(9, 10) → true
+makes10(9, 9) → false
+makes10(1, 9) → true
+
+Answer:- public boolean makes10(int a, int b) {
+            if(a == 10 || b == 10  || (a+b)== 10){
+              return true;
+            }
+            return false;
+          }
+          
+
+Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number.
+nearHundred(93) → true
+nearHundred(90) → true
+nearHundred(89) → false   
+
+Answer:-     public boolean nearHundred(int n) {
+                if(Math.abs(n-100) <= 10 || Math.abs(n-200)<=10 ){
+                  return true;
+                }
+                return false;
+              }
+
+
+ Answer :-     public boolean posNeg(int a, int b, boolean negative) {
+
+                  if((negative == true) && a < 0 && b < 0){
+                    return true;
+                  }else if((negative == false) && (a < 0 || b < 0 )&&( a > 0 || b > 0)){ 
+                    return true;
+                  }
+                  return false;
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
