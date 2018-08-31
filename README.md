@@ -159,11 +159,29 @@ Answer:-   public String notString(String str) {
             }
 
 
+Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..str.length()-1 inclusive).
+missingChar("kitten", 1) → "ktten"
+missingChar("kitten", 0) → "itten"
+missingChar("kitten", 4) → "kittn"
 
+ Answer:-      public String missingChar(String str, int n) {
+                  if(n < str.length()){
+                    return str.substring(0,n) + str.substring(n+1,str.length());
+                  }
+                  return str;
+                }
 
+Given a string, return a new string where the first and last chars have been exchanged.
+frontBack("code") → "eodc"
+frontBack("a") → "a"
+frontBack("ab") → "ba"
 
-
-
-
+ Answer:-       public String frontBack(String str) {
+                  int len = str.length();
+                  if(len>1){
+                  return str.substring(len-1 , len) + (str.substring(1 , len-1)) +str.substring(0 ,1);
+                  }
+                 return str;
+                }
 
 
